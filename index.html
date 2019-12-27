@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+        <link rel="stylesheet" href="materialize.min.css" media="screen,projection"></link>
+        <link rel="stylesheet" href="app.css"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     
+    </head>
+    <body>
+        <div id="app" class="container">
+                <div class="row" v-for="row in rows">
+                    <div class="col s1">
+                        <img class="icon" v-bind:src="'http://localhost:3000/icons/' + row.account +'.png'">
+                    </div>
+                    <div class="col s11">
+                        {{ row.account }} {{ row.name }} {{ row.datetime }}<br/>
+                        {{ row.content }}
+                    </div>
+                </div>
+            </div class="col" >    
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
